@@ -64,10 +64,10 @@ All datasets are **licensed for non-commercial educational use**. Proper citatio
 ## Proposed Methodology
 
 ### Guiding Questions
-1. How has oil and natural gas production varied across municipalities, particularly during **the 2014-2016 oil crash and the COVID-19 pandemic**?
-2. What is the correlation between **oil production, natural gas production, and well counts** with their respective price indices (WCS for Oil, AECO for Natural Gas)?
-3. Do municipalities with **higher oil and gas production** experience a corresponding **increase in rental prices**?
-4. How does **oil and gas production impact employment levels** in Alberta’s municipalities?
+1. How have oil and natural gas production levels varied across municipalities and over time?
+2. How do well counts differ across municipalities and time periods?
+3. What are the trends in rental prices and oil prices across municipalities?
+4. How have employment rates for males and females changed over census years, and which municipalities have the highest and lowest rates?
 
 ### Key Data Queries
 To answer these questions, we will investigate:
