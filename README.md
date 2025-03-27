@@ -71,16 +71,21 @@ All datasets are **licensed for non-commercial educational use**. Proper citatio
 
 ### Key Data Queries
 To answer these questions, we will investigate:
-- **Annual oil and natural gas production** per municipality from 2005 to 2023.
-- **Year-over-year percentage changes** in oil and natural gas production.
-- **Correlation coefficients** between:
-  - Oil production & WCS prices.
-  - Natural gas production & AECO prices.
-  - Well counts & oil/natural gas prices.
-- **Employment level changes** in:
-  - Top 5 oil-producing municipalities.
-  - Top 5 natural gas-producing municipalities.
-  - Municipalities with the largest production declines during **2014-2016**.
+- **Oil and Natural Gas Production**
+     - Total oil and natural gas production per municipality during the COVID-19 pandemic (2020–2022) and oil crash years (2014–2016).
+     - Top 5 municipalities with the highest oil and natural gas production.
+     - Years with the highest and lowest oil and natural gas production in Calgary.
+- **Well Counts**
+     - Total well count per municipality during the COVID-19 pandemic (2020–2022) and 2014–2016.
+     - Top 5 municipalities with the highest well counts.
+- **Employment Trends**:
+  - Employment rates across census years for males, females, and overall trends.
+  - Municipalities with the highest and lowest female and male employment rates per census year.
+  - Top 5 municipalities with the lowest female employment rates for each year.
+- **Rental Market & Pricing**:
+  - All distinct rental types in the dataset.
+  - Top 5 municipalities with the highest rent for each rental type.
+  - Average oil price per year to assess trends over time.
 
 ### Expected Outcomes
 We will **join datasets** based on municipalities and/or years to extract insights related to oil and gas production, rental prices, and employment trends. The project will be successful if we can provide **meaningful insights** based on our guiding questions.
