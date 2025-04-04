@@ -1,137 +1,105 @@
 # DATA-604-Project
 
-# Project Proposal: DATA 604
+# DATA 604- Working with Data at Scale
 
-## Overview
-Our project explores oil and gas production and well data to gain a holistic understanding of Alberta’s oil and gas sector, which is a significant component of the province’s economy. In 2023, mining, quarrying, and oil and gas extraction represented **25.0% of Alberta's gross domestic product (GDP)** [1]. 
+# Team Project: Alberta by the Numbers: A Look at Oil, Gas, Housing, and Employment Across Municipalities
 
-Through this project, we aim to:
-- Identify municipalities with higher oil and natural gas production.
-- Analyze how production levels may impact rental prices within those areas.
-- Investigate the relationship between employment levels and oil and gas production across municipalities.
+## University of Calgary | Faculty of Graduate Studies & Faculty of Science
 
----
+## Submitted by: 
+* ## Akinyemi Apampa | 30234456
+* ## David Fakolujo | 30273636
+* ## Joshua Ogunbo | 30272413
+* ## Ravin Jayasuriya | 30022788
 
-## Datasets
+## Submitted to: Sarah Shah 
 
-We will use the following datasets, sourced primarily from the Government of Alberta and the Government of Canada:
+## Date Submitted: April 3, 2025
 
-1. **Oil Production by Municipality**  
-   - **Source**: Government of Alberta [2]  
-   - **Years Covered**: 2003-2025 (some missing data)  
-   - **Format**: CSV (strings, integers, floating-point numbers)  
-   - **Rows**: 1,619  
+## Introduction <a id="introduction"></a>
 
-2. **Natural Gas Production by Municipality**  
-   - **Source**: Government of Alberta [3]  
-   - **Years Covered**: 2003-2025 (some missing data)  
-   - **Format**: CSV (strings, integers, floating-point numbers)  
-   - **Rows**: 1,648  
+This report looks at how oil production, rental housing, and employment have changed across Alberta. By analyzing municipal-level data, we aim to provide a clear picture of the economic trends shaping munipalities throughout the province.
 
-3. **Well Count by Municipality**  
-   - **Source**: Government of Alberta [4]  
-   - **Years Covered**: 2003-2025 (some missing data)  
-   - **Format**: CSV (strings, integers)  
-   - **Rows**: 1,460  
+Our goals are to:
 
-4. **Average Rent by Municipality**  
-   - **Source**: Government of Canada [5]  
-   - **Years Covered**: 1987-2023 (some gaps)  
-   - **Format**: CSV  
-   - **Rows**: 7,709  
+* Analyze oil and natural gas production across Alberta municipalities.
+* Examine rental price trends within those regions.
+* Explore employment patterns by municipality.
+* Analyze oil and natural price trends across key years and Alberta Municipalities.
 
-5. **Census Employment by Municipality**  
-   - **Source**: Government of Canada [6]  
-   - **Years Covered**: 1981, 1986, 1991, 1996, 2001, 2006, 2011, 2016, 2021  
-   - **Format**: CSV (strings, integers, floating-point numbers)  
-   - **Rows**: 28,603  
+# Guiding Questions <a id="questions"></a>
 
-6. **Western Canada Select (WCS) Oil Price (USD/BBL)**  
-   - **Source**: Alberta Economic Dashboard [7]  
-   - **Years Covered**: January 2005 - January 2025  
-   - **Format**: CSV (strings, integers, floating-point numbers, characters)  
-
-7. **Alberta Energy Company (AECO) Natural Gas Price (CAD/GJ)**  
-   - **Source**: Alberta Energy Regulator [8]  
-   - **Years Covered**: 2002-2024  
-   - **Format**: CSV (strings, integers, floating-point numbers, characters)  
-
-### Data Licensing  
-All datasets are **licensed for non-commercial educational use**. Proper citations are required, and any reproduction **must not imply endorsement** by the data sources. More details on licensing can be found in the **References** section ([9], [10], [11], [12]).
-
----
-
-## Proposed Methodology
-
-### Guiding Questions
 1. How have oil and natural gas production levels varied across municipalities and over time?
+   
 2. How do well counts differ across municipalities and time periods?
-3. What are the trends in rental prices and oil prices across municipalities?
-4. How have employment rates for males and females changed over census years, and which municipalities have the highest and lowest rates?
 
-### Key Data Queries
-To answer these questions, we will investigate:
-- **Oil and Natural Gas Production**
-     - Total oil and natural gas production per municipality during the COVID-19 pandemic (2020–2022) and oil crash years (2014–2016).
-     - Top 5 municipalities with the highest oil and natural gas production.
-     - Years with the highest and lowest oil and natural gas production in Calgary.
-- **Well Counts**
-     - Total well count per municipality during the COVID-19 pandemic (2020–2022) and 2014–2016.
-     - Top 5 municipalities with the highest well counts.
-- **Employment Trends**:
-  - Employment rates across census years for males, females, and overall trends.
-  - Municipalities with the highest and lowest female and male employment rates per census year.
-  - Top 5 municipalities with the lowest female employment rates for each year.
-- **Rental Market & Pricing**:
-  - All distinct rental types in the dataset.
-  - Top 5 municipalities with the highest rent for each rental type.
-  - Average oil price per year to assess trends over time.
+3. What are the trends in rental prices across municipalities?
+   
+4. What is the relationship between rental rates and employment rates (for both genders) in the top 5 municipalities with the highest rents during census years from 2001 to 2021?
 
-### Expected Outcomes
-We will **join datasets** based on municipalities and/or years to extract insights related to oil and gas production, rental prices, and employment trends. The project will be successful if we can provide **meaningful insights** based on our guiding questions.
+5. How have oil revenues and natural gas revenues varied accross municipalities?
 
----
+# Packages <a id="packages"></a>
 
-## Technologies & Tools
-- **Database:** A relational database (e.g., PostgreSQL) will be used to store and manage datasets.
-- **Data Analysis & Processing:**  
-  - **SQL** queries for extracting structured data.  
-  - **Pandas & NumPy** for statistical analysis.  
-  - **Matplotlib & Seaborn** for visualizations.  
-- **Visualization Methods:**  
-  - Time-series plots.  
-  - Correlation heatmaps.  
+**1.  Pandas**​
 
----
+Pandas Python library offering flexible data structures like DataFrames and Series for efficient data manipulation and analysis. It simplifies tasks such as cleaning, transforming, merging, and visualizing structured data​
 
-## Data Cleaning & Transformation
-- **Handling Missing Data:**  
-  - **Statistical imputation** for missing values where applicable.  
-  - **LAG/LEAD window functions** to replace missing values with prior or future values per municipality.
-- **Standardizing Data:**  
-  - Ensuring uniform **municipality names** across datasets.  
-  - Standardizing **year formats** across datasets.  
+​
 
-### Challenges & Solutions
-- **Key Alignment Issues:**  
-  - Standardize **municipality names** across datasets.  
-  - Ensure **consistent date formats** for merging time-based data.
+**2.  Matplotlib​**
 
----
+Matplotlib is a Python library for creating static, animated, and interactive visualizations. It offers a comprehensive API that simplifies the process of generating various types of plots and charts for effective data presentation​
 
-## References
+​
 
-### General Reference
-[1] Government of Alberta (n.d.) **GDP - Alberta Economic Dashboard**. Available at: [Link](https://economicdashboard.alberta.ca/topics/gdp/) (Accessed: 11 March 2025).
+**3.  Seaborn**​
 
-### Datasets
-[2] Government of Alberta (2023) **Oil Production by Municipality**. Available at: [Link](https://open.alberta.ca/opendata/oil-production-by-municipality) (Accessed: 11 March 2025).  
-[3] Government of Alberta (2023) **Natural Gas Production by Municipality**. Available at: [Link](https://open.alberta.ca/opendata/natural-gas-production-by-municipality) (Accessed: 11 March 2025).  
-[4] Government of Alberta (2023) **Well Count by Municipality**. Available at: [Link](https://open.alberta.ca/opendata/well-count-by-municipality) (Accessed: 11 March 2025).  
-[5] Government of Canada (2024) **Dataset on Energy Sector**. Available at: [Link](https://open.canada.ca/data/en/dataset/ce3eb3d1-a840-4656-a37f-025ced90bebe/resource/37e49cc1-3179-4c53-b2b5-b541236cffbf) (Accessed: 11 March 2025).  
-[6] Government of Canada (2024) **Open Data on Energy Production**. Available at: [Link](https://open.canada.ca/data/en/dataset/a0b2dfea-6f74-4c9e-957f-a63341ff0947) (Accessed: 11 March 2025).  
-[7] Government of Alberta (2025) **Western Canada Select (WCS) Oil Price**. Available at: [Link](https://economicdashboard.alberta.ca/dashboard/wcs-oil-price/) (Accessed: 11 March 2025).  
-[8] Alberta Energy Regulator (2024) **AECO-C Natural Gas Prices**. Available at: [Link](https://www.aer.ca/data-and-performance-reports/statistical-reports/alberta-energy-outlook-st98/prices-and-capital-expenditure/natural-gas-prices/aeco-c-price) (Accessed: 11 March 2025).  
+Seaborn is a Python visualization library built on top of Matplotlib that provides a high-level interface for drawing attractive and informative statistical graphics​
 
-### Licensing
-[9] **Government of Alberta Open Data License**: [Link](https://open.alberta.ca/dataset/93376391-696a-4624-a13a-03cbe2ca553b/resource/52e1d428-2376-4aa7-9a72-9bdfb9f34f05/download/open-government-licence-alberta.pdf)  
+​
+
+**4.  SQLAlchemy**​
+
+SQLAlchemy is a Python library for working with databases. It lets you use Python code to create tables, manage connections, and write queries instead of using raw SQL. It supports many database systems and helps keep database tasks clear and organized.
+
+
+# Conclusion <a id="conclusion"></a>
+
+The purpose of this project was to gain a better understanding of trends across the municipalities within Alberta. We analyzed datasets for oil production, natural gas production, well count, employment rate, rental data, oil prices, and natural gas prices over the years 2003–2023. Some of the results we found were:
+
+* There was a steady increase in oil production from 2003 to 2012, followed by a sharp upward trend from 2012 to 2013, which likely occurred due to improvements in in-situ techniques. Although there were dips in production during the oil crash from 2014 to 2016 and the COVID-19 pandemic in 2020, oil production has continued to rise.
+
+* Natural gas production steadily decreased from 2007 to 2012, but began to rise again from 2014 to 2018, particularly in Greenview No. 16 due to the development of the Montney Formation.
+
+* Well counts declined overall from 2003 to 2023, with noticeable dips during major downturns. However, oil and gas production continued to increase, suggesting that newer wells became more productive. This is likely due to advancements in drilling technology such as horizontal drilling and the use of Enhanced Oil Recovery techniques like waterflooding and polymer flooding.
+
+* Municipalities like Wood Buffalo generated the highest oil revenues, while Greenview No. 16 and Yellowhead County led in natural gas revenues.
+
+* Housing data shows that total rent across all municipalities steadily increased until 2019, dropped during the pandemic, and recovered in the following years.
+
+* Looking at rental types, we observed an even distribution across all municipalities. Employment declined between 2016 and 2021, with the oil crash and COVID-19 being major contributing factors.
+
+Overall, Alberta’s energy sector has become more efficient, with production increasing despite fewer wells being drilled. This project is useful for someone who may be looking for employment in the energy industry. By identifying municipalities with higher production and analyzing trends in rental data and resource revenue, an individual may be able to identify a high-producing area and determine whether relocating to that municipality would be beneficial for their career.
+
+# References <a id="references"></a>
+
+Government of Alberta (2023) **Oil Production by Municipality**. Available at: [Link](https://open.alberta.ca/opendata/oil-production-by-municipality) (Accessed: 11 March 2025).  
+
+Government of Alberta (2023) **Natural Gas Production by Municipality**. Available at: [Link](https://open.alberta.ca/opendata/natural-gas-production-by-municipality) (Accessed: 11 March 2025).  
+
+Government of Alberta (2023) **Well Count by Municipality**. Available at: [Link](https://open.alberta.ca/opendata/well-count-by-municipality) (Accessed: 11 March 2025).  
+
+Government of Canada (2024) **Average Rent by Municipality**. Available at: [Link](https://open.canada.ca/data/en/dataset/ce3eb3d1-a840-4656-a37f-025ced90bebe/resource/37e49cc1-3179-4c53-b2b5-b541236cffbf) (Accessed: 11 March 2025).  
+
+Government of Canada (2024) **Census Employment by Municipality**. Available at: [Link](https://open.canada.ca/data/en/dataset/a0b2dfea-6f74-4c9e-957f-a63341ff0947) (Accessed: 11 March 2025).  
+
+Government of Alberta (2025) **Western Canada Select (WCS) Oil Price**. Available at: [Link](https://economicdashboard.alberta.ca/dashboard/wcs-oil-price/) (Accessed: 11 March 2025).  
+
+Alberta Energy Regulator (2024) **AECO-C Natural Gas Prices**. Available at: [Link](https://www.aer.ca/data-and-performance-reports/statistical-reports/alberta-energy-outlook-st98/prices-and-capital-expenditure/natural-gas-prices/aeco-c-price) (Accessed: 11 March 2025).  
+
+Oil Sands Magazine (2016) **Mining versus in-situ: How energy companies are shifting their priorities**. Available at: [Link](https://www.oilsandsmagazine.com/news/2016/7/18/mining-versus-in-situ-how-energy-companies-are-shifting-their-priorities) (Accessed: 3 April 2025).
+
+Regional Aquatics Monitoring Program (n.d.) **Development Resources**. Available at: [Link](http://www.ramp-alberta.org/resources/development.aspx) (Accessed: 3 April 2025).
+
+**Government of Alberta Open Data License**: [Link](https://open.alberta.ca/dataset/93376391-696a-4624-a13a-03cbe2ca553b/resource/52e1d428-2376-4aa7-9a72-9bdfb9f34f05/download/open-government-licence-alberta.pdf)  
