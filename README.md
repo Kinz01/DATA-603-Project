@@ -1,8 +1,6 @@
-# DATA-604-Project
-
 # DATA 604- Working with Data at Scale
 
-# Team Project: Alberta by the Numbers: A Look at Oil, Gas, Housing, and Employment Across Municipalities
+## Team Project: Alberta by the Numbers: A Look at Oil, Gas, Housing, and Employment Across Municipalities
 
 ## University of Calgary | Faculty of Graduate Studies & Faculty of Science
 
